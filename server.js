@@ -60,6 +60,13 @@ app.get('/about',(req,res)=>{
 	});
 });
 
+app.get('/projects',(req,res)=>{
+	//res.send('About Page');
+	res.render('projects.hbs', {
+		pageTitle: 'Project'
+	});
+});
+
 // /bad route - send back json data with errorMessage property
 app.get('/bad',(req,res)=>{
 	res.send({
